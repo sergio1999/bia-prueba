@@ -1,0 +1,20 @@
+.customHeader {
+    background-color: var(--dark-blue);
+    color: var(--color-font);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    -webkit-box-shadow: 0px 0px 5px 5px rgba(29, 42, 51, 1);
+    -moz-box-shadow: 0px 0px 5px 5px rgba(29, 42, 51, 1);
+    box-shadow: 0px 0px 5px 5px rgba(29, 42, 51, 1);
+}
+
+.title {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.mode {
+    font-weight: 600;
+}
