@@ -1,4 +1,4 @@
-import { Button } from '@mui/material';
+// import { Button } from '@mui/material';
 import styles from './header.module.css';
 
 export default function HeaderComponent() {
@@ -8,7 +8,7 @@ export default function HeaderComponent() {
         <h1>Where in the world?</h1>
       </div>
       <div className={styles.mode}>
-        <Button> dark mode</Button>
+        {/* <Button>dark mode</Button> */}
       </div>
     </header>
   );
