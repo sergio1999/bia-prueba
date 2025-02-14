@@ -1,5 +1,5 @@
-import { nunitoSans } from "./ui/assets/fonts/fonts";
-import "./ui/assets/styles/global.css";
+import { nunitoSans } from "../public/fonts/fonts";
+import "@/public/styles/global.css";
 
 export default function RootLayout({
   children,

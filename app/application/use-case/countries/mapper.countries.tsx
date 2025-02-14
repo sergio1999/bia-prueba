@@ -8,6 +8,9 @@ export function mapperCountries(countries: any[]): Countrie[] {
     if (!element.tld) {
       element.tld = [""];
     }
+    if (!element.borders) {
+      element.borders = [];
+    }
     const countrie: Countrie = {
       name: element.name?.common,
       nativeName: element.name?.nativeName?.official,
@@ -23,24 +26,6 @@ export function mapperCountries(countries: any[]): Countrie[] {
     };
     return countrie;
   });
-  //   countries.forEach((element, index) => {
-  //     const countrie: Countrie = {
-  //       name: element.name?.common,
-  //       nativeName: element.name?.nativeName?.official,
-  //       population: element.population,
-  //       region: element.region,
-  //       subRegion: element.subregion,
-  //       capital: element.capital[0],
-  //       borders: element.borders,
-  //       tld: element.tld[0],
-  //       currencies: getCurrencies(element),
-  //       languages: GetLanguages(element),
-  //     };
-  //     listCountries.push(countrie);
-  //     if (index == 66) {
-  //       return;
-  //     }
-  //   });
   listCountries.sort((a, b) => a.name.localeCompare(b.name));
   return listCountries;
 }

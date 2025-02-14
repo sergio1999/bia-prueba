@@ -1,16 +1,18 @@
+"use client";
 import styles from "./card.module.css";
 import Image from "next/image";
 import { Countrie } from "@/app/application/use-case/countries/countries.interface";
+import { MouseEvent } from "react";
+import { useRouter } from "next/navigation";
 
-export default function CardComponent({
-  country,
-  key,
-}: {
-  country: Countrie;
-  key: number;
-}) {
+export default function CardComponent({ country }: { country: Countrie }) {
+  const router = useRouter();
+  const clickCard = (e: MouseEvent<HTMLDivElement>) => {
+    e.preventDefault()
+    router.push(`/home/${decodeURI(country.name)}`);
+  };
   return (
-    <div className={styles.cardCountry}>
+    <div className={styles.cardCountry} onClick={clickCard}>
       <div className={styles.image}>
         <Image
           src={country.image}

@@ -1,0 +1,12 @@
+.filterSelect {
+    width: 25%;
+    background-color: var(--dark-blue);
+    color: var(--color-font);
+}
+
+
+@media (max-width: 768px) {
+    .filterSelect {
+        width: 40%;
+    }
+}

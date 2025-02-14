@@ -10,7 +10,6 @@ export default function HomeLayout({
     <div>
       <HeaderComponent />
       <section className={styles.container}>{children}</section>
-      {/* <Button onClick={console.log('holi')}>Open drawer</Button> */}
     </div>
   );
 }

@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --dark-blue: #2b3945;
+  --very--dark--blue: #202c37;
+  --very--dark--blue-text: #111517;
+  --dark--gray: #858585;
+  --very--light--gray: #fafafa;
+  --color-font: #ffffff;
+  --box-shadow-header: 0 0 5px 5px #1d2a33;
+  --box-shadow-card: 0px 5px 5px rgba(29, 42, 51, 1);
+}

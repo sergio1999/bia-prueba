@@ -1,0 +1,80 @@
+.buttonBack {
+    background-color: var(--dark-blue);
+}
+
+.icon {
+    color: var(--color-font);
+}
+
+.cointainerCountry {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 5%;
+}
+
+.containerImage>img {
+    box-shadow: var(--box-shadow-card);
+}
+
+.containerInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.containerInfo>.nameCountry {
+    color: var(--color-font);
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.containerInfo>.data {
+    display: flex;
+    justify-content: space-between;
+}
+
+.containerInfo>.borderCountries {
+    color: var(--color-font);
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.containerInfo>.borderCountries>p {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.containerInfo>.borderCountries>div {
+    background-color: var(--dark-blue);
+    margin: 10px 5px;
+    font-size: 12px;
+    padding: 5px 10px;
+    border-radius: 2px;
+    box-shadow: var(--box-shadow-card);
+}
+
+
+.containerInfo>.data>.info {
+    color: var(--color-font);
+}
+
+.containerInfo>.data>.info>p {
+    padding: 0 0 10px 0;
+}
+
+.containerInfo>.data>.info>h1 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.containerInfo>.data>.info>p>span {
+    font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    .cointainerCountry {
+        grid-template-columns: 1fr;
+    }
+}

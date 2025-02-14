@@ -1,27 +1,28 @@
 import CardComponent from "../ui/components/cards/card";
-import { UseCaseCountries } from "../application/use-case/countries/usecase-countries";
+import {
+  countriesGlobal,
+  getRegions,
+} from "../application/use-case/countries/usecase-countries";
 import styles from "./home.module.css";
 import FilterComponent from "../ui/components/filtet/filter";
-import { Input } from "../ui/components/search/search";
+import React from "react";
+import SearchComponent from "../ui/components/search/search";
 
 export default async function HomePage() {
-  const countries = await UseCaseCountries();
-  console.log(countries);
+  const list = countriesGlobal;
+  const regions = await getRegions();
 
   return (
     <div>
       <div className={styles.containerFiltro}>
-        <Input
-          name="q"
-          type="search"
-          placeholder="Search for a county..."
-          className="w-full rounded-lg bg-background pl-8 md:w-[200px] lg:w-[336px]"
-        />
-        <FilterComponent />
+        <SearchComponent />
+        <FilterComponent regions={regions} />
       </div>
       <div className={styles.containerData}>
-        {countries.map((item, i) => (
-          <CardComponent country={item} key={i}></CardComponent>
+        {list.map((item, i) => (
+          <React.Fragment key={i}>
+            <CardComponent country={item}></CardComponent>
+          </React.Fragment>
         ))}
       </div>
     </div>

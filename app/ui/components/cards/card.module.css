@@ -1,11 +1,10 @@
 .cardCountry {
     background-color: var(--dark-blue);
-    box-shadow: 0 0 5px 5px #1d2a33;
+    box-shadow: var(--box-shadow-card);
     border-radius: 10px;
 }
 
-.image {
-}
+.image {}
 
 .image>img {
     height: 150px;
